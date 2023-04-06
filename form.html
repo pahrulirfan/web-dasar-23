@@ -6,43 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <!-- update test form -->
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
 </head>
 
 <body>
-    <h1>Form HTML</h1>
-    <form action="login.php" method="post">
-        <label for="">NIM</label>
-        <input required type="text" name="txtnim" id=""> <br>
-        <label for="">Password</label>
-        <input required type="password" name="txtpassword"> <br>
-        <label for="">Alamat</label>
-        <textarea required name="txtalamat" id="" cols="" rows="3"></textarea>
-        <br>
-        <!-- pilihan -->
-        <label for="">Jenis Kelamin</label>
-        <input type="radio" name="rbjk" value="L" id=""> Laki - Laki
-        <input type="radio" name="rbjk" value="P" id=""> Perempuan
-        <br>
-        <label for="">Jurusan</label>
-        <input type="radio" name="rbjurusan" value="SI" id=""> SI
-        <input type="radio" name="rbjurusan" value="RPL" id=""> RPL
-        <br>
-        <label for="">Konsentrasi</label>
-        <select name="optkonsentrasi" id="">
-            <option value="jaringan">Jaringan</option>
-            <option value="rpl">RPL</option>
-        </select>
-        <br>
-        <label for="">Login Sebagai</label>
-        <select name="status" class="form-control">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-3 bg-primary">Kolom 1</div>
+
+            <div class="col-6 bg-success">Kolom 2</div>
+
+            <div class="col-3 bg-warning">Kolom 3</div>
+
+        </div>
+
+        <h1 class="alert alert-primary">Form HTML</h1>
+
+        <form action="login.php" method="post">
+
+            <div class="mb-3">
+                <label for="" class="form-label">NIM</label>
+                <input class="form-control" required type="text" name="txtnim" id="">
+            </div>
+
+            <div class="mb-3">
+                <label for="">Password</label>
+                <input class="form-control" required type="password" name="txtpassword">
+            </div>
+            <div class="mb-3">
+                <label for="">Alamat</label>
+                <textarea class="form-control" required name="txtalamat" id="" cols="" rows="3"></textarea>
+            </div>
+            <!-- pilihan -->
+            <div class="form-check">
+                <label for="">Jenis Kelamin</label>
+                <input class="form-check-input" type="radio" name="rbjk" value="L" id=""> Laki - Laki
+                <input type="radio" name="rbjk" value="P" id=""> Perempuan
+            </div>
+            <label for="">Jurusan</label>
+            <input type="radio" name="rbjurusan" value="SI" id=""> SI
+            <input type="radio" name="rbjurusan" value="RPL" id=""> RPL
+            <br>
+            <div class="mb-3">
+                <label for="">Konsentrasi</label>
+                <select class="form-control" name="optkonsentrasi" id="">
+                <option value="jaringan">Jaringan</option>
+                <option value="rpl">RPL</option>
+            </select>
+            </div>
+            <label for="">Login Sebagai</label>
+            <select class="form-control" name="status" class="form-control">
             <option value="">Login Sebagai..</option>
             <option value="mahasiswa">Mahasiswa</option>
             <option value="dosen">Dosen</option>
         </select>
-        <br>
-        <input type="submit" value="Simpan"> <input type="reset" value="Reset">
-    </form>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Simpan">
+            <input class="btn btn-danger" type="reset" value="Reset">
+        </form>
+    </div>
 </body>
 
 </html>
